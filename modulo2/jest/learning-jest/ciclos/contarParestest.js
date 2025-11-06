@@ -1,0 +1,3 @@
+const {contarPares} =require ('/contarPares');
+
+

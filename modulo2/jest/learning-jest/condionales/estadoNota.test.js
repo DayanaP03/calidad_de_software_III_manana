@@ -1,0 +1,20 @@
+const {puedeConducir}= require('./ estadoNota');
+
+
+describe(' estadoNota', ()=>{
+    test('Happy path:8 Aprobado ',()=>{
+        expect(estadoNota(8)).toBe('Aprobado');
+    });
+
+    test('Happy path: 5 Supletorio y 2 Reprobado  ',()=>{
+        expect(estadoNota(8)).toBe('Sulpletorio');
+        expect(estadoNota(8)).toBe('Reprobado ');
+    });
+
+     test('Sad path : edad invalida',()=>{
+        expect(()=> estadoNota(-1)).toThrow('nota invalida');
+        expect(()=> estadoNota('10')).toThrow('nota invalida');
+        expect(()=> estadoNota('50')).toThrow('nota  invalida');
+    });
+});
+
